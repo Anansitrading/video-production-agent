@@ -1,0 +1,265 @@
+/* ===== BEAUTIFUL BACKGROUND GRADIENTS ===== */
+/* Colorful gradient backgrounds that work perfectly with glassmorphism */
+
+/* === MAIN BACKGROUND GRADIENTS === */
+.bg-gradient-aurora {
+  background: linear-gradient(135deg, 
+    #667eea 0%, 
+    #764ba2 25%, 
+    #f093fb 50%, 
+    #f5576c 75%, 
+    #4facfe 100%);
+  background-size: 400% 400%;
+  animation: aurora-shift 15s ease infinite;
+}
+
+.bg-gradient-cosmic {
+  background: linear-gradient(135deg,
+    #1e3c72 0%,
+    #2a5298 25%,
+    #764ba2 50%,
+    #f093fb 75%,
+    #f5576c 100%);
+  background-size: 400% 400%;
+  animation: cosmic-flow 20s ease infinite;
+}
+
+.bg-gradient-ocean {
+  background: linear-gradient(135deg,
+    #74b9ff 0%,
+    #0984e3 25%,
+    #6c5ce7 50%,
+    #a29bfe 75%,
+    #fd79a8 100%);
+  background-size: 400% 400%;
+  animation: ocean-wave 18s ease infinite;
+}
+
+.bg-gradient-sunset {
+  background: linear-gradient(135deg,
+    #ff9a9e 0%,
+    #fecfef 25%,
+    #fecfef 50%,
+    #ffc3a0 75%,
+    #ff9a9e 100%);
+  background-size: 400% 400%;
+  animation: sunset-glow 12s ease infinite;
+}
+
+.bg-gradient-forest {
+  background: linear-gradient(135deg,
+    #11998e 0%,
+    #38ef7d 25%,
+    #2ed573 50%,
+    #70a1ff 75%,
+    #3742fa 100%);
+  background-size: 400% 400%;
+  animation: forest-breeze 16s ease infinite;
+}
+
+.bg-gradient-royal {
+  background: linear-gradient(135deg,
+    #667db6 0%,
+    #0082c8 25%,
+    #0052d4 50%,
+    #4776e6 75%,
+    #8e54e9 100%);
+  background-size: 400% 400%;
+  animation: royal-waves 14s ease infinite;
+}
+
+.bg-gradient-neon {
+  background: linear-gradient(135deg,
+    #fa71cd 0%,
+    #c471f5 25%,
+    #9f44d3 50%,
+    #6d28d9 75%,
+    #8b5cf6 100%);
+  background-size: 400% 400%;
+  animation: neon-pulse 10s ease infinite;
+}
+
+/* === ANIMATED BACKGROUND KEYFRAMES === */
+@keyframes aurora-shift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 50% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes cosmic-flow {
+  0% { background-position: 0% 0%; }
+  33% { background-position: 100% 50%; }
+  66% { background-position: 50% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes ocean-wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes sunset-glow {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 25% 75%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 75% 25%; }
+}
+
+@keyframes forest-breeze {
+  0% { background-position: 0% 25%; }
+  25% { background-position: 50% 0%; }
+  50% { background-position: 100% 75%; }
+  75% { background-position: 50% 100%; }
+  100% { background-position: 0% 25%; }
+}
+
+@keyframes royal-waves {
+  0% { background-position: 0% 50%; }
+  33% { background-position: 75% 25%; }
+  66% { background-position: 25% 75%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes neon-pulse {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: brightness(1) saturate(1);
+  }
+  25% { 
+    background-position: 100% 25%;
+    filter: brightness(1.1) saturate(1.2);
+  }
+  50% { 
+    background-position: 100% 75%;
+    filter: brightness(0.9) saturate(0.8);
+  }
+  75% { 
+    background-position: 0% 100%;
+    filter: brightness(1.05) saturate(1.1);
+  }
+}
+
+/* === OVERLAY PATTERNS FOR EXTRA DEPTH === */
+.bg-pattern-dots {
+  position: relative;
+}
+
+.bg-pattern-dots::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-pattern-grid {
+  position: relative;
+}
+
+.bg-pattern-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-pattern-diagonal {
+  position: relative;
+}
+
+.bg-pattern-diagonal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    45deg, 
+    rgba(255, 255, 255, 0.03) 25%, 
+    transparent 25%, 
+    transparent 75%, 
+    rgba(255, 255, 255, 0.03) 75%
+  );
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* === SPECIALIZED CHAT BACKGROUNDS === */
+.chat-bg-primary {
+  background: linear-gradient(135deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 25%,
+    rgba(219, 39, 119, 0.1) 50%,
+    rgba(239, 68, 68, 0.1) 75%,
+    rgba(251, 146, 60, 0.1) 100%);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.explore-wall-bg {
+  background: linear-gradient(135deg,
+    rgba(16, 185, 129, 0.1) 0%,
+    rgba(34, 197, 94, 0.1) 25%,
+    rgba(59, 130, 246, 0.1) 50%,
+    rgba(147, 51, 234, 0.1) 75%,
+    rgba(236, 72, 153, 0.1) 100%);
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+}
+
+/* === RESPONSIVE GRADIENT ADJUSTMENTS === */
+@media (max-width: 768px) {
+  .bg-gradient-aurora,
+  .bg-gradient-cosmic,
+  .bg-gradient-ocean,
+  .bg-gradient-sunset,
+  .bg-gradient-forest,
+  .bg-gradient-royal,
+  .bg-gradient-neon {
+    background-size: 200% 200%;
+  }
+  
+  .bg-pattern-dots::before {
+    background-size: 15px 15px;
+  }
+  
+  .bg-pattern-grid::before {
+    background-size: 20px 20px;
+  }
+  
+  .bg-pattern-diagonal::before {
+    background-size: 30px 30px;
+  }
+}
+
+/* === PERFORMANCE OPTIMIZATIONS === */
+@media (prefers-reduced-motion: reduce) {
+  .bg-gradient-aurora,
+  .bg-gradient-cosmic,
+  .bg-gradient-ocean,
+  .bg-gradient-sunset,
+  .bg-gradient-forest,
+  .bg-gradient-royal,
+  .bg-gradient-neon {
+    animation: none;
+    background-position: 50% 50%;
+  }
+}
